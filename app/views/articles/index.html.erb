@@ -1,5 +1,20 @@
-<%= link_to 'Write New', new_article_path %>
-<h1>Listing articles</h1>
+<h1>記事一覧</h1>
+<br>
+<%= link_to 'Write New', 記事を書く, class: "btn btn-primary" %>
+<br><br>
+<%# ドロップダウンテスト %>
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button"
+        id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Sort
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="#">Date</a></li>
+        <li><a href="#">Author</a></li>
+        <li><a href="#">Name</a></li>
+    </ul>
+</div>
 
 <table>
 	<tr>
@@ -11,7 +26,7 @@
 	<% @articles.each do |article| %>
 		<tr>
 			<td><%= article.title%></td>
-			<td><%= article.text%></td>
+			<td><%= article.text[0,3]+"..."%></td>
 			<td><%= link_to 'Show', article_path(article)%></td>
 			<td><%= link_to 'Edit', edit_article_path(article) %></td>
 			<td><%= link_to 'Destroy', article_path(article),
