@@ -1,8 +1,6 @@
 <h1>記事一覧</h1>
 <br>
-<%= link_to 'Write New', 記事を書く, class: "btn btn-primary" %>
-<br><br>
-<%# ドロップダウンテスト %>
+<%= link_to '記事を書く', new_article_path, class: "btn btn-primary" %>
 <div class="dropdown">
     <button class="btn btn-default dropdown-toggle" type="button"
         id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -15,7 +13,7 @@
         <li><a href="#">Name</a></li>
     </ul>
 </div>
-
+<br>
 <table>
 	<tr>
 		<th>Title</th>
