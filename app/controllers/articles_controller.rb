@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
-  def edit #end.html.erbに対応
+  def edit #edit.html.erbに対応
     @article = Article.find(params[:id])
   end
   
