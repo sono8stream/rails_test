@@ -3,10 +3,6 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
-  $("div#rect").on 'click', (e)->
-    rect=$(e.target)
-    x=e.pageX-rect.position().left
-    y=e.pageY-rect.position().top
-    block=$("<div class='block' style='left: #{x}px; top: #{y}px;' />").
-      draggable(containment: "parent").css(position: "absolute")
-    rect.append(block)
+  $("div#rect").hover ->
+    $(@).stop().animate {height : '200px'}, 'fast', ->
+      $(@).stop().animate {height : '50px'}, 'slow'

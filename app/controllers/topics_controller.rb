@@ -6,6 +6,7 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
+    @newpost = Post.new(:topic_id => params[:id]) # newpostに記事idを渡す
     @posts = Post.where(topic_id: params[:id])
   end
 
