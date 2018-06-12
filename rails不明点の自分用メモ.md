@@ -29,3 +29,15 @@ link_to リンクテキスト, リンク先のパス
 ## coffeeScript実行
 
 事前にNode.jsをインストールしておくこと
+
+## アニメーションライブラリTweenMaxの導入
+
+Gemfile内に
+
+> gem 'greensock-rails'
+
+bundle install実行
+
+application.js内に
+
+> //= require 'greensock/TweenMax'
