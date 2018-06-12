@@ -41,3 +41,5 @@ bundle install実行
 application.js内に
 
 > //= require 'greensock/TweenMax'
+
+[使い方](http://www.mdesign-works.com/blog/web/tween-max/)
