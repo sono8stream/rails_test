@@ -42,4 +42,4 @@ application.js内に
 
 > //= require 'greensock/TweenMax'
 
-[使い方](http://www.mdesign-works.com/blog/web/tween-max/)
+アニメーションの書き方は[こちら](http://www.mdesign-works.com/blog/web/tween-max/)を参考に
