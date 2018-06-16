@@ -15,6 +15,7 @@
 //= require jquery
 //= require jquery-ui
 //= require turbolinks
+//= require popper
 //= require bootstrap-sprockets
 //= require 'greensock/TweenMax'
 //= require_tree .
