@@ -43,3 +43,11 @@ application.js内に
 > //= require 'greensock/TweenMax'
 
 アニメーションの書き方は[こちら](http://www.mdesign-works.com/blog/web/tween-max/)を参考に
+
+## BootStrap 4 導入時のjsエラー解決法
+
+Gemfile内の
+
+> gem 'duktape'
+
+を削除し、bundle update
