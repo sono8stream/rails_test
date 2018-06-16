@@ -51,3 +51,11 @@ Gemfile内の
 > gem 'duktape'
 
 を削除し、bundle update
+
+## sorcery導入
+### db:migrateでエラーが生じる場合
+migrationファイルの1行目を
+
+> class SorceryCore < ActiveRecord::Migration[4.2]
+
+にする(エラーメッセージの通り)
