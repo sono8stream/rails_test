@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  get 'home/index'
+  get 'sessions/new'
+  get 'sessions/create'
+  get 'sessions/destroy'
+  get '/welcome', to: "sessions#new", as: :welcome
+  post '/login', to:"sessions#create", as: :login
+  delete '/logout', to: "sessions#destroy", as: :logout
+  #get 'users/new'
+  #get 'users/create'
   get 'topics/index'
   get 'topics/show/:id' => 'topics#show', as: :topics_show
   get 'welcome/index'
@@ -9,6 +18,8 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
+
+  resources :users, only: [:new, :create]
 
   root 'welcome#index'
 end
