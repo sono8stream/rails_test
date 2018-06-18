@@ -1,18 +1,12 @@
-<%= image_tag 'logo.png'%>
-<h1>Here's Gamma.</h1>
-<br>
-<%= link_to 'Go to Blog', {controller: 'articles'}, class: "btn btn-primary btn-lg" %>
-<%= link_to 'Go to Topic', {controller: 'topics'}, class: "btn btn-primary btn-lg" %>
-<%= link_to 'Login', welcome_path, class: "btn btn-primary btn-lg" %>
 
-<%# ドロップダウンテスト %>
-<div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button"
-        id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        Menu
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li><a href="#">New Article</a></li>
-    </ul>
+<div class="container">
+    <%= image_tag 'logo.png'%>
+    <h1>Here's Gamma.</h1>
+    <div class="btn-toolbar">
+        <div class="btn-group">
+            <%= link_to 'Blog', {controller: 'articles'}, class: "btn btn-primary"%>
+            <%= link_to 'Topic', {controller: 'topics'}, class: "btn btn-primary"%>
+            <%= link_to 'Login', welcome_path, class: "btn btn-primary"%>
+        </div>
+    </div>
 </div>
