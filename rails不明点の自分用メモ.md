@@ -51,3 +51,26 @@ Gemfile内の
 > gem 'duktape'
 
 を削除し、bundle update
+
+## sorcery導入
+### db:migrateでエラーが生じる場合
+migrationファイルの1行目を
+
+> class SorceryCore < ActiveRecord::Migration[4.2]
+
+にする(エラーメッセージの通り)
+
+## ページ移動時にjQueryが作動しないときの解決法
+
+turboLinkにより、ページ移動時にjQueryが作動しない。
+
+そこで、Rails5ではスクリプトを実行させるタイミングに応じて以下を書いて機能を実装する。
+
+- 初回読み込み、リロード、ページ切り替えのとき
+> $(document).on 'turbolinks:load', -> 
+
+- 初回読み込み、ページ切り替えのとき(リロード時は動かない)
+> $(document).on 'turbolinks:render', -> 
+
+- ページ遷移前に行いたいとき(ページ切り替え、リロード時は動かない)
+> $(document).on 'turbolinks:request-start', ->
