@@ -2,13 +2,13 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$ ->
+$(document).on 'turbolinks:load', ->
   $("div#rect").hover(
-    ->
+    -># マウスon
       TweenMax.to @, 0.5,
-        scale: 1.2,
+        scale: 1.1,
         ease: Power2.easeInOut
-    ->
+    -># マウスoff
       TweenMax.to @, 0.5,
         scale: 1,
         ease: Power2.EaseInOut
