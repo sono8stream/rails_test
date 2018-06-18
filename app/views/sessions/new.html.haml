@@ -1,4 +1,5 @@
-%h1 Sessions#new
+%h1 ログイン
+%br
 = form_tag login_path, method: :post do
     %div
         = label_tag :email
@@ -8,3 +9,8 @@
         = password_field_tag :password
     %div
         = submit_tag "Login"
+%br
+= link_to('新規登録', new_user_path, class: "btn btn-primary")
+%br
+%br
+= link_to('Home', root_path,class: "btn btn-primary")
