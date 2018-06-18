@@ -74,3 +74,27 @@ turboLinkにより、ページ移動時にjQueryが作動しない。
 
 - ページ遷移前に行いたいとき(ページ切り替え、リロード時は動かない)
 > $(document).on 'turbolinks:request-start', ->
+
+## Bootstrap4によるツールバーのテンプレート
+
+bootstrap4では以下のように書く。
+
+```
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">ブランド名やロゴなど</a>
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="Navber">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">ホーム <span class="sr-only">(現位置)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">リンク</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+```
