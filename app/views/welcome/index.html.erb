@@ -1,12 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><%= image_tag('logo.png', size: "64x64")%></a>
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="Navber">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">ホーム <span class="sr-only">(現位置)</span></a>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'ブログ', {controller: 'articles'}, class: "nav-link"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to '掲示板', {controller: 'topics'}, class: "nav-link"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'ログイン', welcome_path, class: "nav-link"%>
+      </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
 
 <div class="container">
-    <%= image_tag 'logo.png'%>
     <h1>Here's Gamma.</h1>
-    <div class="btn-toolbar">
-        <div class="btn-group">
-            <%= link_to 'Blog', {controller: 'articles'}, class: "btn btn-primary"%>
-            <%= link_to 'Topic', {controller: 'topics'}, class: "btn btn-primary"%>
-            <%= link_to 'Login', welcome_path, class: "btn btn-primary"%>
-        </div>
-    </div>
 </div>
