@@ -69,8 +69,8 @@ turboLinkにより、ページ移動時にjQueryが作動しない。
 - 初回読み込み、リロード、ページ切り替えのとき
 > $(document).on 'turbolinks:load', -> 
 
-- 初回読み込み、ページ切り替えのとき(リロードは動かない)
+- 初回読み込み、ページ切り替えのとき(リロード時は動かない)
 > $(document).on 'turbolinks:render', -> 
 
-- ページ遷移前に行いたい処理用。ページ切り替えでもリロードでも動かない
+- ページ遷移前に行いたいとき(ページ切り替え、リロード時は動かない)
 > $(document).on 'turbolinks:request-start', ->
