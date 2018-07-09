@@ -18,4 +18,6 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require 'greensock/TweenMax'
+//= require simplemde/dist/simplemde.min.js
+//= require marked
 //= require_tree .

@@ -2,4 +2,18 @@
 
 <%= render 'form'%>
 
+<textarea id="editor"></textarea>
+<script>
+var simplemde = new SimpleMDE({ element: document.getElementById("editor"),
+    forceSync: true,
+    spellChecker: false });
+</script>
+<div id="content"></div>
+<script>
+document.getElementById('content').innerHTML
+=marked(document.getElementById("editor").value);
+</script>
+
 <%= link_to '一覧へ', articles_path%>
+
+https://drive.google.com/uc?id=10uiWp1A5nM79onKl3SICxkcuxApdr-lO

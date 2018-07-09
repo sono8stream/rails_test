@@ -12,7 +12,9 @@
  *
  *= require_self
  *= require topics
+ *= require common
  *= require font-awesome
  */
 
 @import "bootstrap";
+@import 'simplemde/dist/simplemde.min.css';

@@ -31,3 +31,7 @@ $(document).on 'turbolinks:load', ->
       yoyo: true,
       repeat: 1,
       ease: Power2.easeInOut
+
+  #$(window).scroll ->
+  #  if $(@).scrollTop() > $('navbar').outerHeight() ->
+  #    $('navbar').attr('navbar', 'fixed-top')
