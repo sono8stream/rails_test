@@ -98,3 +98,14 @@ bootstrap4では以下のように書く。
   </div>
 </nav>
 ```
+
+## carrierwave-dropbox導入時のエラー
+
+以下のサイトを参考に進めたが、誤りがあった。
+
+https://qiita.com/kazuhisa/items/f4db2673ed33b695d101
+
+dropbox:authorizeの実行時、dropboxの設定によってACCESS_TYPEで指定するパラメータが異なる。
+
+App folderの場合: app_folder
+Full Dropboxの場合: dropbox
